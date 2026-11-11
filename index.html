@@ -3,42 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foam Gaming — Find or Fill</title>
-  <meta name="description" content="Foam Gaming'in online iki kişilik refleks oyunu Find or Fill: sayıyı bul ya da kutuları doldur!">
+  <title>Foam Gaming — Mobil Oyunlar</title>
+  <meta name="description" content="Foam Gaming bağımsız bir mobil oyun stüdyosu. Find or Fill, Bird Jam ve daha fazlası Google Play ve App Store'da.">
   <link rel="icon" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="foam-gaming.png" alt="Foam Gaming">
-      <nav>
-        <a href="privacy.html">Gizlilik</a>
-        <a href="delete-data.html">Veri silme</a>
-        <a href="mailto:help@foamgaming.com">İletişim</a>
-      </nav>
-    </header>
+  <header id="site-header"></header>
 
+  <main>
     <section class="hero">
-      <img class="game" src="find-or-fill-logo.png" alt="Find or Fill">
-      <p>Online iki kişilik refleks düellosu. Rakibin hedef sayıyı ararken sen kutularını doldur — 100 kutuyu ilk tamamlayan kazanır!</p>
-      <p class="muted">Yakında Google Play ve App Store'da.</p>
+      <div class="wrap">
+        <h1>Kısa molalar için<br><span>büyük eğlence</span></h1>
+        <p>Foam Gaming, hızlı açılan ve bırakması zor mobil oyunlar yapan bağımsız bir stüdyo.</p>
+        <a class="btn" href="#oyunlar">Oyunlarımızı keşfet</a>
+      </div>
     </section>
 
-    <div class="card">
-      <h2 style="margin-top:0">Nasıl oynanır?</h2>
-      <ul>
-        <li><b>FIND:</b> Karışık sayı tablosunda rakibinin seçtiği sayıyı en hızlı şekilde bul.</li>
-        <li><b>FILL:</b> Rakibin ararken kendi 10x10 kağıdındaki kutuları tek tek doldur.</li>
-        <li>Roller her turda değişir. 100 kutuyu ilk dolduran kazanır.</li>
-        <li>Rastgele online rakiple eşleş ya da oda kurup arkadaşınla oyna.</li>
-      </ul>
-    </div>
+    <section id="oyunlar">
+      <div class="wrap">
+        <h2 class="section-title">Oyunlarımız</h2>
+        <p class="section-sub">Google Play ve App Store için geliştirdiğimiz oyunlar. Bir oyuna tıkla, ayrıntıları gör.</p>
+        <div class="games" id="games-grid"></div>
+      </div>
+    </section>
 
-    <footer>
-      © 2026 Foam Gaming · <a href="privacy.html">Gizlilik Politikası</a> · <a href="delete-data.html">Veri silme</a> · <a href="mailto:help@foamgaming.com">help@foamgaming.com</a>
-    </footer>
-  </div>
+    <section id="hakkimizda">
+      <div class="wrap">
+        <h2 class="section-title">Hakkımızda</h2>
+        <p class="section-sub">Küçük ekip, net hedef: oynaması kolay, ustalaşması keyifli oyunlar.</p>
+        <div class="about">
+          <div><h3>🎮 Hızlı oyun</h3><p>Birkaç dakikalık molalara uygun, hemen başlayan oyunlar.</p></div>
+          <div><h3>🔒 Gizliliğe saygı</h3><p>Sadece oyunun çalışması için gereken veriyi işliyoruz, veri satmıyoruz. Hesabını oyunun içinden tek dokunuşla silebilirsin. <a href="privacy.html">Gizlilik politikası</a></p></div>
+          <div><h3>💬 Ulaşılabilir destek</h3><p>Soru, öneri ve hata bildirimleri için <a href="mailto:help@foamgaming.com">help@foamgaming.com</a></p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="games.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+FOAM GAMING SİTESİ — GÜNCELLEME (11 Kasım 2026)
+================================================
+Bu klasörün TÜM içeriğini sitenin köküne (GitHub Pages / hosting) yükle.
+CNAME, .nojekyll, app-ads.txt, favicon ve logolar korunmuştur.
+
+Ne değişti
+- index.html: tek oyun yerine stüdyo ana sayfası + oyun kartları
+- find-or-fill.html, bird-jam.html: oyun sayfaları
+- privacy.html / delete-data.html: TÜM oyunları kapsayan tek politika
+  (Play Console'da iki oyun da bu adresleri kullanıyor — adresler aynı kaldı)
+- games.js: oyun listesi; site.js: ortak header/footer; style.css: ortak stil
+
+YENİ OYUN EKLEMEK (örn. Hoop Star)
+1) İkonu ekle: hoop-star-icon.png (512x512)
+2) games.js → diziye yeni nesne ekle (id, name, description, icon, color, tags, status, page)
+3) bird-jam.html'i kopyala → hoop-star.html; <body data-game="hoop-star">, <title> ve "Nasıl oynanır?" adımlarını değiştir
+Ana sayfa kartı, menü, footer ve gizlilik sayfalarındaki oyun listesi otomatik güncellenir.
+Oyun yeni bir veri türü topluyorsa privacy.html tablosuna satır ekle.
+
+MAĞAZAYA ÇIKINCA
+games.js → googlePlay / appStore linkini yaz, status: "live" yap.

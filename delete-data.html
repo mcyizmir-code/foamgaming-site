@@ -3,49 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veri Silme / Data Deletion — Find or Fill</title>
+  <title>Hesap ve Veri Silme — Foam Gaming</title>
+  <meta name="description" content="Foam Gaming oyunlarında (Find or Fill, Bird Jam) hesabınızı ve verilerinizi nasıl silersiniz.">
   <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a href="index.html"><img src="foam-gaming.png" alt="Foam Gaming"></a>
-      <nav><a href="index.html">Ana sayfa</a><a href="privacy.html">Gizlilik</a></nav>
-    </header>
+  <header id="site-header"></header>
+  <main class="wrap legal">
+    <div class="lang-switch"><button data-l="tr">Türkçe</button><button data-l="en">English</button></div>
 
-    <div class="card">
-      <h1>Find or Fill — Veri ve hesap silme</h1>
-      <p class="muted">Geliştirici: Foam Gaming</p>
-      <p>Find or Fill sunucularında kalıcı bir oyuncu hesabı veya profil veritabanı tutulmaz. Adın ve giriş bilgilerin yalnızca cihazında saklanır; oyun verileri maç bitince sunucudan silinir.</p>
-      <h2>Verilerini silmek için</h2>
+    <!-- ===================== TÜRKÇE ===================== -->
+    <div class="tr">
+      <h1>Hesap ve Veri Silme</h1>
+      <p class="updated">Geliştirici: Foam Gaming · Geçerli oyunlar:</p>
+      <ul data-games-list></ul>
+
+      <h2>Yöntem 1 — Oyunun içinden (anında)</h2>
       <ol>
-        <li>Uygulamada sağ üstteki adına dokun → <b>Çıkış yap</b> (misafirde <b>Profili sıfırla</b>). Cihazdaki ad, giriş bilgisi ve oturum anahtarı silinir.</li>
-        <li>İstersen uygulamayı kaldır; cihazda kalan tüm uygulama verileri de silinir.</li>
-        <li>Google ile giriş izni için: <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google Hesabı → Üçüncü taraf bağlantıları</a> · Apple için: Ayarlar → Apple Kimliği → Apple ile Giriş Yap.</li>
-        <li>Herhangi bir verinin silinmesini talep etmek için <a href="mailto:help@foamgaming.com?subject=Find%20or%20Fill%20veri%20silme">help@foamgaming.com</a> adresine "Veri silme talebi" konulu e-posta gönder. Talepler 30 gün içinde yanıtlanır.</li>
+        <li>Oyunu açın ve ana ekrandaki profil düğmesine (adınıza) dokunun.</li>
+        <li><b>Hesabımı sil</b>'e dokunun.</li>
+        <li><b>Kalıcı olarak sil</b> ile onaylayın.</li>
       </ol>
-      <h2>Saklanan / silinen veriler</h2>
+      <p>Hesabınız ve sunucudaki tüm oyun verileriniz hemen ve kalıcı olarak silinir; cihazınızdaki profil de sıfırlanır.</p>
+
+      <h2>Yöntem 2 — E-posta ile</h2>
+      <p>Uygulamaya erişemiyorsanız <a href="mailto:help@foamgaming.com?subject=Veri%20silme%20talebi">help@foamgaming.com</a> adresine <b>"Veri silme talebi"</b> konulu bir e-posta gönderin. Lütfen şunları yazın:</p>
       <ul>
-        <li>Cihazdaki ad, hesap kimliği, e-posta ve oturum anahtarı: yukarıdaki adımlarla hemen silinir.</li>
-        <li>Sunucudaki oda ve maç verileri: maç bittiğinde otomatik silinir (saklanmaz).</li>
-        <li>Reklam verileri Google AdMob tarafından Google'ın politikalarına göre işlenir; reklam kimliğini cihaz ayarlarından sıfırlayabilirsin.</li>
-        <li>Satın alma kayıtları Google Play / App Store tarafından yasal süreler boyunca saklanır.</li>
+        <li>Oyunun adı (Find or Fill, Bird Jam…)</li>
+        <li>Oyundaki oyuncu adınız</li>
+        <li>Giriş yönteminiz (Google / Apple / misafir)</li>
+      </ul>
+      <p>Talepler en geç 30 gün içinde işlenir ve size bilgi verilir.</p>
+
+      <h2>Ne silinir, ne kalır?</h2>
+      <table>
+        <tr><th>Veri</th><th>Durum</th></tr>
+        <tr><td>Oyuncu adı, hesap kimliği, hesap anahtarı</td><td>Hemen silinir</td></tr>
+        <tr><td>Oyun parası, enerji, güçlendiriciler/yetenekler, istatistikler, bölüm ilerlemesi, kartpostallar</td><td>Hemen silinir</td></tr>
+        <tr><td>Find or Fill maç ve oda verileri</td><td>Zaten maç bitince otomatik silinir</td></tr>
+        <tr><td>Sunucu bağlantı kayıtları (IP)</td><td>Barındırma sağlayıcısının standart süresi sonunda otomatik silinir</td></tr>
+        <tr><td>"Reklamları Kaldır" satın alımı</td><td><b>Silinmez</b> — mağaza hesabınıza bağlıdır; Google Play / App Store kayıtları yasal süreler boyunca tutar. Yeniden kurulumda "Satın almaları geri yükle" ile geri gelir.</td></tr>
+        <tr><td>Reklam verileri (AdMob)</td><td>Google tarafından Google politikalarına göre işlenir. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilir veya silebilirsiniz.</td></tr>
+      </table>
+
+      <h2>Diğer adımlar</h2>
+      <ul>
+        <li><b>Çıkış yap / Profili sıfırla:</b> Yalnızca bu cihazdaki profili temizler; hesabınız sunucuda kalır ve tekrar girişte geri gelir.</li>
+        <li><b>Uygulamayı kaldırmak</b> cihazdaki verileri siler, sunucudaki hesabı silmez.</li>
+        <li><b>Google/Apple bağlantısı:</b> Google Hesabınızdaki "Üçüncü taraf bağlantıları" sayfasından veya Apple Kimliği ayarlarındaki "Apple ile Giriş Yap" bölümünden kaldırabilirsiniz.</li>
       </ul>
     </div>
 
-    <div class="card">
-      <h1>Find or Fill — Account &amp; data deletion</h1>
-      <p class="muted">Developer: Foam Gaming</p>
-      <p>Find or Fill does not keep persistent player accounts or profiles on its servers. Your name and sign-in data are stored only on your device; game data is deleted from the server when a match ends.</p>
-      <ol>
-        <li>In the app, tap your name (top right) → <b>Sign out</b> (guests: <b>Reset profile</b>). This deletes your name, sign-in data and session key from the device.</li>
-        <li>Uninstalling the app removes all remaining app data from your device.</li>
-        <li>To request deletion of any data, email <a href="mailto:help@foamgaming.com?subject=Find%20or%20Fill%20data%20deletion">help@foamgaming.com</a> with the subject "Data deletion request". We respond within 30 days.</li>
-      </ol>
-    </div>
+    <!-- ===================== ENGLISH ===================== -->
+    <div class="en">
+      <h1>Account &amp; Data Deletion</h1>
+      <p class="updated">Developer: Foam Gaming · Applies to:</p>
+      <ul data-games-list></ul>
 
-    <footer>© 2026 Foam Gaming · <a href="privacy.html">Privacy Policy</a></footer>
-  </div>
+      <h2>Option 1 — In the game (instant)</h2>
+      <ol>
+        <li>Open the game and tap the profile button (your name) on the home screen.</li>
+        <li>Tap <b>Delete my account</b>.</li>
+        <li>Confirm with <b>Delete permanently</b>.</li>
+      </ol>
+      <p>Your account and all game data on our servers are deleted immediately and permanently, and the profile on your device is reset.</p>
+
+      <h2>Option 2 — By email</h2>
+      <p>If you cannot access the app, email <a href="mailto:help@foamgaming.com?subject=Data%20deletion%20request">help@foamgaming.com</a> with the subject <b>"Data deletion request"</b> and include:</p>
+      <ul>
+        <li>The game name (Find or Fill, Bird Jam…)</li>
+        <li>Your in-game player name</li>
+        <li>Your sign-in method (Google / Apple / guest)</li>
+      </ul>
+      <p>Requests are processed within 30 days and we will confirm by email.</p>
+
+      <h2>What is deleted / kept</h2>
+      <table>
+        <tr><th>Data</th><th>Status</th></tr>
+        <tr><td>Player name, account ID, account key</td><td>Deleted immediately</td></tr>
+        <tr><td>Coins, energy, boosters/skills, statistics, level progress, postcards</td><td>Deleted immediately</td></tr>
+        <tr><td>Find or Fill match and room data</td><td>Already deleted automatically when the match ends</td></tr>
+        <tr><td>Server connection logs (IP)</td><td>Deleted automatically after the hosting provider's standard retention period</td></tr>
+        <tr><td>"Remove Ads" purchase</td><td><b>Not deleted</b> — it belongs to your store account; Google Play / App Store keep records for legally required periods. Use "Restore purchases" after reinstalling.</td></tr>
+        <tr><td>Ad data (AdMob)</td><td>Processed by Google under Google's policies. You can reset or delete your advertising ID in device settings.</td></tr>
+      </table>
+
+      <h2>Other steps</h2>
+      <ul>
+        <li><b>Sign out / Reset profile:</b> Only clears the profile on this device; your account stays on the server and returns when you sign in again.</li>
+        <li><b>Uninstalling the app</b> deletes on-device data but not your server account.</li>
+        <li><b>Google/Apple connection:</b> Remove it on your Google Account's "Third-party connections" page or under "Sign in with Apple" in your Apple ID settings.</li>
+      </ul>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="games.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -3,100 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gizlilik Politikası / Privacy Policy — Find or Fill</title>
+  <title>Gizlilik Politikası — Foam Gaming</title>
+  <meta name="description" content="Foam Gaming oyunlarının (Find or Fill, Bird Jam) gizlilik politikası.">
   <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a href="index.html"><img src="foam-gaming.png" alt="Foam Gaming"></a>
-      <nav><a href="index.html">Ana sayfa</a><a href="delete-data.html">Veri silme</a></nav>
-    </header>
+  <header id="site-header"></header>
+  <main class="wrap legal">
+    <div class="lang-switch"><button data-l="tr">Türkçe</button><button data-l="en">English</button></div>
 
-    <a class="lang" href="#tr">Türkçe</a><a class="lang" href="#en">English</a>
-
-    <div class="card" id="tr">
+    <!-- ===================== TÜRKÇE ===================== -->
+    <div class="tr">
       <h1>Gizlilik Politikası</h1>
-      <p class="muted">Uygulama: Find or Fill · Geliştirici: Foam Gaming · Son güncelleme: 3 Kasım 2026</p>
+      <p class="updated">Son güncelleme: 11 Kasım 2026</p>
+      <p>Bu politika, Foam Gaming tarafından geliştirilen tüm mobil oyunlar için geçerlidir:</p>
+      <ul data-games-list></ul>
+      <p>Bir oyuna özel farklılık varsa ilgili bölümde ayrıca belirtilir.</p>
 
-      <p>Bu politika, Foam Gaming tarafından geliştirilen <b>Find or Fill</b> mobil oyununun ("Uygulama") hangi verileri işlediğini açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş olursun.</p>
-
-      <h2>1. Topladığımız bilgiler</h2>
-      <ul>
-        <li><b>Oyuncu adı:</b> İlk açılışta misafir olarak yazdığın ad ya da Google / Apple ile girişte hesabından alınan <b>ilk adın</b>. Bu ad, oyunda rakiplerine gösterilir.</li>
-        <li><b>Google veya Apple ile giriş bilgileri:</b> Giriş yaparsan sağlayıcı bize hesap kimliğini, adını ve (paylaşmayı seçersen) e-posta adresini iletir. Bu bilgiler <b>yalnızca cihazında</b> saklanır; sunucularımıza e-posta adresin gönderilmez.</li>
-        <li><b>Oturum kimliği:</b> Bağlantın koptuğunda maça geri dönebilmen için cihazında rastgele bir oturum anahtarı oluşturulur.</li>
-        <li><b>Oyun verileri:</b> Oda kodu, hamleler ve skorlar oyun süresince sunucunun belleğinde tutulur; maç/oda kapandığında silinir. Kalıcı bir oyuncu veritabanı tutmuyoruz.</li>
-        <li><b>Teknik veriler:</b> Sunucumuz, bağlantının çalışması için IP adresini geçici olarak işler (barındırma sağlayıcısının standart kayıtları dahil).</li>
-      </ul>
+      <h2>1. Toplanan bilgiler</h2>
+      <table>
+        <tr><th>Veri</th><th>Ne için</th><th>Nerede</th></tr>
+        <tr><td><b>Oyuncu adı</b> (misafir takma adı veya Google/Apple'dan gelen ad)</td><td>Oyunda görünmesi. Find or Fill'de rakipleriniz de görür.</td><td>Sunucu + cihaz</td></tr>
+        <tr><td><b>Hesap kimliği</b> (rastgele oluşturulan oyun hesabı kimliği ve anahtarı; Google ile girişte Google hesap kimliği)</td><td>İlerlemenizi hesabınıza bağlamak, cihaz değiştirince geri yüklemek</td><td>Sunucu + cihaz</td></tr>
+        <tr><td><b>Oyun verileri</b> (oyun parası, enerji, güçlendiriciler/yetenekler, istatistikler, günlük bonus, Bird Jam'de bölüm ilerlemesi ve kartpostallar)</td><td>Oyunun çalışması, ilerlemenin kaybolmaması, hile koruması</td><td>Sunucu</td></tr>
+        <tr><td><b>Maç verileri</b> (yalnızca Find or Fill: oda kodu, hamleler, skor)</td><td>Online maçın oynanması</td><td>Sunucu belleği — maç bitince silinir</td></tr>
+        <tr><td><b>E-posta</b> (Google/Apple girişinde isteğe bağlı)</td><td>Profilde gösterim</td><td>Yalnızca cihaz — sunucuya gönderilmez</td></tr>
+        <tr><td><b>Dil, reklamsız sürüm bilgisi</b></td><td>Uygulama ayarları</td><td>Cihaz</td></tr>
+        <tr><td><b>Teknik veriler</b> (IP adresi, bağlantı kayıtları)</td><td>Bağlantının kurulması, güvenlik</td><td>Barındırma sağlayıcısının standart kayıtları</td></tr>
+      </table>
+      <p>Konum, kişiler, fotoğraf, mikrofon veya kamera erişimi istemiyoruz.</p>
 
       <h2>2. Reklamlar (Google AdMob)</h2>
-      <p>Uygulama, Google AdMob aracılığıyla reklam gösterir. AdMob; reklam kimliği (Android Advertising ID / iOS IDFA), IP adresi, cihaz ve uygulama etkileşim bilgileri gibi verileri reklam sunmak, ölçmek ve dolandırıcılığı önlemek için toplayabilir. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılardan açılışta Google'ın izin formu ile onay istenir; tercihlerini ana ekrandaki <i>Profil → Gizlilik ve reklam tercihleri</i> bölümünden değiştirebilirsin. iOS'ta takip izni Apple'ın App Tracking Transparency penceresiyle sorulur. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google'ın iş ortağı sitelerindeki veri kullanımı</a>.</p>
-
-      <h2>3. Uygulama içi satın alma</h2>
-      <p>"Reklamları Kaldır" satın alımı Google Play veya App Store tarafından işlenir. Ödeme bilgilerine erişimimiz yoktur; yalnızca satın alımın geçerli olduğu bilgisini alırız.</p>
-
-      <h2>4. Verilerin paylaşımı</h2>
-      <p>Kişisel verilerini satmıyoruz. Veriler yalnızca hizmetin çalışması için şu sağlayıcılarla işlenir: Google (AdMob, Google ile giriş, Google Play), Apple (Apple ile giriş, App Store) ve sunucu barındırma sağlayıcımız Render.</p>
-
-      <h2>5. Saklama ve silme</h2>
-      <p>Cihazındaki veriler, uygulamada <i>Profil → Çıkış yap / Profili sıfırla</i> ile ya da uygulamayı kaldırarak silinir. Sunucudaki oyun verileri maç bitince silinir. Ayrıntılar ve talep yolu için: <a href="delete-data.html">Veri silme</a>.</p>
-
-      <h2>6. Çocuklar</h2>
-      <p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan kişisel veri toplamayız.</p>
-
-      <h2>7. Haklarınız (KVKK / GDPR)</h2>
-      <p>6698 sayılı KVKK ve GDPR kapsamında verilerine erişme, düzeltme, silme ve işlemeye itiraz etme hakların vardır. Taleplerini aşağıdaki adrese iletebilirsin.</p>
-
-      <h2>8. Değişiklikler</h2>
-      <p>Bu politikayı güncelleyebiliriz; güncel sürüm her zaman bu sayfada yayımlanır.</p>
-
-      <h2>9. İletişim</h2>
-      <p>Foam Gaming · <a href="mailto:help@foamgaming.com">help@foamgaming.com</a> · <a href="https://www.foamgaming.com">www.foamgaming.com</a></p>
-    </div>
-
-    <div class="card" id="en">
-      <h1>Privacy Policy</h1>
-      <p class="muted">App: Find or Fill · Developer: Foam Gaming · Last updated: November 3, 2026</p>
-
-      <p>This policy explains what data the <b>Find or Fill</b> mobile game ("App") by Foam Gaming processes. By using the App you agree to this policy.</p>
-
-      <h2>1. Information we collect</h2>
       <ul>
-        <li><b>Player name:</b> the nickname you enter as a guest, or the <b>first name</b> from your Google / Apple account. It is shown to your opponents in the game.</li>
-        <li><b>Sign-in data:</b> if you sign in with Google or Apple, the provider gives us your account ID, name and (if you choose to share it) email address. This is stored <b>only on your device</b>; your email is never sent to our servers.</li>
-        <li><b>Session ID:</b> a random session key is created on your device so you can rejoin a match after a disconnect.</li>
-        <li><b>Game data:</b> room codes, moves and scores are kept in server memory during play and deleted when the match/room ends. We do not keep a persistent player database.</li>
-        <li><b>Technical data:</b> our server temporarily processes your IP address to keep the connection working (including our hosting provider's standard logs).</li>
+        <li>Oyunlarımızda Google AdMob reklamları (banner, geçiş ve ödüllü reklam) gösterilir.</li>
+        <li>AdMob; reklam göstermek, ölçmek ve dolandırıcılığa karşı korumak için reklam kimliği (Android Advertising ID / iOS IDFA), IP adresi, cihaz ve etkileşim verilerini toplayabilir.</li>
+        <li>AEA, Birleşik Krallık ve İsviçre'deki kullanıcılardan açılışta onay istenir; onayınızı <i>Profil → Gizlilik ve reklam tercihleri</i> bölümünden istediğiniz zaman değiştirebilirsiniz.</li>
+        <li>iOS'ta izleme izni Apple'ın Uygulama İzleme Şeffaflığı (ATT) penceresiyle sorulur.</li>
+        <li>Ayrıntı: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google'ın iş ortaklarının verileri nasıl kullandığı</a></li>
       </ul>
 
-      <h2>2. Advertising (Google AdMob)</h2>
-      <p>The App shows ads via Google AdMob, which may collect the advertising ID (Android Advertising ID / iOS IDFA), IP address, device and interaction data to serve and measure ads and prevent fraud. Users in the EEA, UK and Switzerland are asked for consent through Google's consent form at launch and can change their choice under <i>Profile → Privacy &amp; ad preferences</i>. On iOS, tracking permission is requested via Apple's App Tracking Transparency prompt. Learn more: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from partner apps</a>.</p>
+      <h2>3. Uygulama içi satın alma</h2>
+      <p>"Reklamları Kaldır" satın alımı Google Play veya App Store tarafından işlenir. Biz yalnızca satın alımın geçerli olduğu bilgisini alırız; ödeme bilgilerinizi görmeyiz. Satın alım mağaza hesabınıza bağlıdır ve oyun hesabınızı silseniz de geçerli kalır.</p>
 
-      <h2>3. In-app purchases</h2>
-      <p>The "Remove Ads" purchase is processed by Google Play or the App Store. We never see your payment details; we only receive confirmation that the purchase is valid.</p>
+      <h2>4. Paylaşım ve hizmet sağlayıcılar</h2>
+      <p>Kişisel verilerinizi satmayız ve reklam amacıyla kendimiz paylaşmayız. Veriler yalnızca hizmetin çalışması için gereken sağlayıcılarla işlenir:</p>
+      <ul>
+        <li><b>Google</b> — AdMob, Google ile Giriş, Google Play</li>
+        <li><b>Apple</b> — Apple ile Giriş, App Store</li>
+        <li><b>Render</b> — oyun sunucularının barındırılması</li>
+        <li><b>Neon</b> — oyun hesaplarının saklandığı veritabanı</li>
+      </ul>
+      <p>Bu sağlayıcıların sunucuları Türkiye dışında (AB/ABD) bulunabilir.</p>
 
-      <h2>4. Sharing</h2>
-      <p>We do not sell personal data. Data is processed only by the providers needed to run the service: Google (AdMob, Google Sign-In, Google Play), Apple (Sign in with Apple, App Store) and our server host, Render.</p>
+      <h2>5. Saklama ve silme</h2>
+      <ul>
+        <li>Hesap ve oyun verileri, hesabınızı silene kadar saklanır.</li>
+        <li>Hesabınızı oyunun içinden <i>Profil → Hesabımı sil</i> ile anında ve kalıcı olarak silebilirsiniz.</li>
+        <li>Find or Fill maç verileri maç veya oda kapanınca otomatik silinir.</li>
+        <li>Tüm yöntemler: <a href="delete-data.html">Hesap ve veri silme</a></li>
+      </ul>
 
-      <h2>5. Retention and deletion</h2>
-      <p>On-device data is removed via <i>Profile → Sign out / Reset profile</i> or by uninstalling the App. Server-side game data is deleted when the match ends. See <a href="delete-data.html">Data deletion</a> for details and requests.</p>
+      <h2>6. Güvenlik</h2>
+      <p>Uygulama ile sunucu arasındaki bağlantı şifrelidir (HTTPS/WSS). Hesap anahtarları sunucuda yalnızca özet (hash) olarak tutulur.</p>
 
-      <h2>6. Children</h2>
-      <p>The App is not directed to children under 13, and we do not knowingly collect personal data from them.</p>
+      <h2>7. Çocuklar</h2>
+      <p>Oyunlarımız 13 yaş altı çocuklara yönelik değildir ve bilerek bu yaştaki çocukların verilerini toplamayız. Böyle bir durumu fark ederseniz bize yazın, verileri sileriz.</p>
 
-      <h2>7. Your rights</h2>
-      <p>Under GDPR and Turkish KVKK you may request access to, correction or deletion of your data, or object to processing, by contacting us.</p>
+      <h2>8. Haklarınız</h2>
+      <p>KVKK ve GDPR kapsamında verilerinize erişme, düzeltme, silme, taşınabilirlik talep etme ve işlemeye itiraz etme haklarına sahipsiniz. Talepleriniz için <a href="mailto:help@foamgaming.com">help@foamgaming.com</a> adresine yazabilirsiniz; 30 gün içinde yanıtlarız.</p>
 
-      <h2>8. Changes</h2>
-      <p>We may update this policy; the current version is always published on this page.</p>
+      <h2>9. Değişiklikler</h2>
+      <p>Bu politika yeni oyunlar veya özellikler eklendikçe güncellenebilir; güncel sürüm her zaman bu sayfada yayınlanır.</p>
 
-      <h2>9. Contact</h2>
-      <p>Foam Gaming · <a href="mailto:help@foamgaming.com">help@foamgaming.com</a> · <a href="https://www.foamgaming.com">www.foamgaming.com</a></p>
+      <h2>10. İletişim</h2>
+      <p>Foam Gaming — <a href="mailto:help@foamgaming.com">help@foamgaming.com</a> — <a href="https://foamgaming.com">foamgaming.com</a></p>
     </div>
 
-    <footer>© 2026 Foam Gaming</footer>
-  </div>
+    <!-- ===================== ENGLISH ===================== -->
+    <div class="en">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: November 11, 2026</p>
+      <p>This policy applies to all mobile games developed by Foam Gaming:</p>
+      <ul data-games-list></ul>
+      <p>Where a game differs, this is stated in the relevant section.</p>
+
+      <h2>1. Information we collect</h2>
+      <table>
+        <tr><th>Data</th><th>Purpose</th><th>Where</th></tr>
+        <tr><td><b>Player name</b> (guest nickname or the name from Google/Apple)</td><td>Shown in the game. In Find or Fill your opponents also see it.</td><td>Server + device</td></tr>
+        <tr><td><b>Account ID</b> (a randomly generated game account ID and key; your Google account ID if you sign in with Google)</td><td>Linking your progress to your account and restoring it on a new device</td><td>Server + device</td></tr>
+        <tr><td><b>Game data</b> (coins, energy, boosters/skills, statistics, daily bonus; level progress and postcards in Bird Jam)</td><td>Running the game, keeping your progress, cheat protection</td><td>Server</td></tr>
+        <tr><td><b>Match data</b> (Find or Fill only: room code, moves, score)</td><td>Playing online matches</td><td>Server memory — deleted when the match ends</td></tr>
+        <tr><td><b>Email</b> (optional, from Google/Apple sign-in)</td><td>Shown in your profile</td><td>Device only — never sent to our servers</td></tr>
+        <tr><td><b>Language, ad-free status</b></td><td>App settings</td><td>Device</td></tr>
+        <tr><td><b>Technical data</b> (IP address, connection logs)</td><td>Establishing the connection, security</td><td>Hosting provider's standard logs</td></tr>
+      </table>
+      <p>We do not request access to your location, contacts, photos, microphone or camera.</p>
+
+      <h2>2. Advertising (Google AdMob)</h2>
+      <ul>
+        <li>Our games show Google AdMob ads (banner, interstitial and rewarded).</li>
+        <li>AdMob may collect advertising IDs (Android Advertising ID / iOS IDFA), IP address, device and interaction data to serve, measure and protect ads against fraud.</li>
+        <li>Users in the EEA, UK and Switzerland are asked for consent at launch and can change it at any time under <i>Profile → Privacy &amp; ad preferences</i>.</li>
+        <li>On iOS, tracking permission is requested through Apple's App Tracking Transparency prompt.</li>
+        <li>More: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner apps</a></li>
+      </ul>
+
+      <h2>3. In-app purchases</h2>
+      <p>The "Remove Ads" purchase is processed by Google Play or the App Store. We only receive confirmation that the purchase is valid; we never see your payment details. The purchase belongs to your store account and stays valid even if you delete your game account.</p>
+
+      <h2>4. Sharing and service providers</h2>
+      <p>We do not sell personal data or share it for advertising ourselves. Data is processed only by providers required to run the service:</p>
+      <ul>
+        <li><b>Google</b> — AdMob, Google Sign-In, Google Play</li>
+        <li><b>Apple</b> — Sign in with Apple, App Store</li>
+        <li><b>Render</b> — game server hosting</li>
+        <li><b>Neon</b> — database storing game accounts</li>
+      </ul>
+      <p>These providers' servers may be located outside Turkey (EU/US).</p>
+
+      <h2>5. Retention and deletion</h2>
+      <ul>
+        <li>Account and game data are kept until you delete your account.</li>
+        <li>You can delete your account instantly and permanently in the game via <i>Profile → Delete my account</i>.</li>
+        <li>Find or Fill match data is deleted automatically when the match or room closes.</li>
+        <li>All options: <a href="delete-data.html">Account &amp; data deletion</a></li>
+      </ul>
+
+      <h2>6. Security</h2>
+      <p>The connection between the app and our servers is encrypted (HTTPS/WSS). Account keys are stored on the server only as hashes.</p>
+
+      <h2>7. Children</h2>
+      <p>Our games are not directed at children under 13 and we do not knowingly collect their data. If you believe we have, contact us and we will delete it.</p>
+
+      <h2>8. Your rights</h2>
+      <p>Under GDPR and Turkey's KVKK you may request access, correction, deletion or portability of your data, or object to its processing. Email <a href="mailto:help@foamgaming.com">help@foamgaming.com</a>; we reply within 30 days.</p>
+
+      <h2>9. Changes</h2>
+      <p>This policy may be updated as new games or features are added; the current version is always published on this page.</p>
+
+      <h2>10. Contact</h2>
+      <p>Foam Gaming — <a href="mailto:help@foamgaming.com">help@foamgaming.com</a> — <a href="https://foamgaming.com">foamgaming.com</a></p>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="games.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
