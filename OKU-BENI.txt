@@ -19,3 +19,5 @@ Oyun yeni bir veri türü topluyorsa privacy.html tablosuna satır ekle.
 
 MAĞAZAYA ÇIKINCA
 games.js → googlePlay / appStore linkini yaz, status: "live" yap.
+
+GÜNCELLEME YAPINCA: tüm .html dosyalarında ?v=2 değerini ?v=3, ?v=4... diye artır (tarayıcı önbelleği için).
