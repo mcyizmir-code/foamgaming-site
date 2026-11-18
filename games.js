@@ -38,7 +38,7 @@ window.FOAM_GAMES = [
     icon: "cannon-clash-icon.png",
     color: "#ffc02e",
     tags: ["Aksiyon", "Fizik", "Tek Oyuncu"],
-    status: "soon",
+    status: "test",
     page: "cannon-clash.html",
     googlePlay: "",   // yayınlanınca: https://play.google.com/store/apps/details?id=com.foamgaming.cannonclash
     appStore: ""
@@ -51,7 +51,7 @@ window.FOAM_GAMES = [
     icon: "bogaz-vts-icon.png",
     color: "#5fd6ff",
     tags: ["Simülasyon", "Strateji", "Tek Oyuncu"],
-    status: "dev",
+    status: "test",
     page: "bogaz-vts.html",
     googlePlay: "",   // yayınlanınca: https://play.google.com/store/apps/details?id=com.foamgaming.bogazvts
     appStore: ""
