@@ -30,6 +30,32 @@ window.FOAM_GAMES = [
     googlePlay: "",   // yayınlanınca: https://play.google.com/store/apps/details?id=com.foamgaming.birdjam
     appStore: ""
   }
+  ,{
+    id: "cannon-clash",
+    name: "Cannon Clash",
+    tagline: "Kaleyi yık, karşı ateşten sağ çık!",
+    description: "Topunu nişanla, kaleleri yık. Okçular ve topçular karşılık verir. 100 kale, 5 dünya, günlük görevler ve toplar.",
+    icon: "cannon-clash-icon.png",
+    color: "#ffc02e",
+    tags: ["Aksiyon", "Fizik", "Tek Oyuncu"],
+    status: "soon",
+    page: "cannon-clash.html",
+    googlePlay: "",   // yayınlanınca: https://play.google.com/store/apps/details?id=com.foamgaming.cannonclash
+    appStore: ""
+  }
+  ,{
+    id: "bogaz-vts",
+    name: "Boğaz VTS",
+    tagline: "Dünyanın boğazlarında gemi trafiğini yönet",
+    description: "İstanbul Boğazı'ndan Panama'ya 7 boğazda tankerleri, vapurları ve balıkçıları yönet. Kılavuz kaptan gönder, acil durumlara yetiş, rütbe atla.",
+    icon: "bogaz-vts-icon.png",
+    color: "#5fd6ff",
+    tags: ["Simülasyon", "Strateji", "Tek Oyuncu"],
+    status: "dev",
+    page: "bogaz-vts.html",
+    googlePlay: "",   // yayınlanınca: https://play.google.com/store/apps/details?id=com.foamgaming.bogazvts
+    appStore: ""
+  }
   // Sıradaki oyun:
   // { id: "hoop-star", name: "Hoop Star", ..., status: "dev" }
 ];
