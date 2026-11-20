@@ -36,3 +36,12 @@ AYARLAR (content.mjs → SITE)
   testerGroup       Kapalı test Google Grubu.
 
 Play Console'daki gizlilik / veri silme adresleri değişmedi: /privacy.html, /delete-data.html
+
+DAVET LİNKİ (21 Kasım 2026) — üreticiden bağımsız, elle duran dosyalar
+  join/index.html                  https://foamgaming.com/join/?c=KOD  → uygulamayı açar, yüklü değilse Google Play
+                                   (Ayarlar dosyanın sonundaki <script> başında: CLOSED_TEST, APP_STORE_URL)
+  .well-known/assetlinks.json      Android App Links: link doğrudan uygulamada açılsın diye.
+                                   Play Console → Test ve yayınla → Uygulama bütünlüğü → Uygulama imzalama →
+                                   "Digital Asset Links JSON"daki SHA-256 parmak izlerini buraya yaz (iki satır: Play imzası + yükleme anahtarı).
+  .well-known/apple-app-site-association   iOS Universal Links: TEAMID yerine Apple Developer Team ID (Apple hesabı açılınca).
+  build.mjs bu dosyalara dokunmaz. .nojekyll sayesinde .well-known yayınlanır.

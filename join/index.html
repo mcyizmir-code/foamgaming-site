@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find or Fill — düello daveti</title>
+<meta name="description" content="Arkadaşın seni Find or Fill'de düelloya çağırıyor. Sayıyı bul, kutuları doldur, 100 kutuyu ilk dolduran kazanır.">
+<meta name="robots" content="noindex">
+<meta property="og:site_name" content="Foam Gaming">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Find or Fill'de düelloya davet edildin">
+<meta property="og:description" content="Dokun, uygulamada aç. Yüklü değilse mağazaya yönlendirilirsin.">
+<meta property="og:image" content="https://foamgaming.com/assets/img/find-or-fill/feature-tr.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1E1240">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preload" href="/assets/fonts/bungee-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Davet sayfası: "Gece maçı" teması (uygulamayla aynı). Kod ?c=KOD ile gelir.
+   Android: uygulama yüklüyse App Links / intent ile açılır, değilse Google Play'e gider.
+   iOS: uygulama şeması denenir, açılmazsa App Store (yayınlanınca). */
+@font-face{font-family:Bungee;src:url(/assets/fonts/bungee-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}
+@font-face{font-family:Bungee;src:url(/assets/fonts/bungee-latin-ext.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap}
+@font-face{font-family:Nunito;src:url(/assets/fonts/nunito-latin.woff2) format("woff2");font-weight:200 1000;font-display:swap}
+@font-face{font-family:Nunito;src:url(/assets/fonts/nunito-latin-ext.woff2) format("woff2");font-weight:200 1000;unicode-range:U+0100-02AF,U+1E00-1EFF;font-display:swap}
+:root{--bg:#1E1240;--panel:#2A1B57;--line:#4B3790;--ink:#FFF8EC;--dim:#C3B6E8;--gold:#FFC93C;--mint:#2BE0A0;--coral:#FF5E7E}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:700 16px/1.5 Nunito,system-ui,sans-serif}
+body{background:radial-gradient(60rem 30rem at 20% -10%,rgba(126,87,255,.45),transparent 60%),radial-gradient(rgba(255,248,236,.06) 1px,transparent 1.4px) 0 0/14px 14px,var(--bg)}
+main{max-width:440px;margin:0 auto;padding:28px 22px 36px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;min-height:100svh}
+.brand{font:22px Bungee,sans-serif;color:var(--gold);text-decoration:none}
+.brand i{font-style:normal;color:var(--coral);font-size:13px}.brand b{font-weight:400;color:var(--mint)}
+h1{margin:4px 0 0;font:400 26px/1.12 Bungee,sans-serif;text-wrap:balance;text-transform:uppercase}
+p{margin:0;color:#E3D8FF;max-width:330px}
+.code{display:flex;gap:6px;margin:6px 0}
+.tile{position:relative;width:46px;height:60px;border-radius:9px;background:linear-gradient(#FFF6E2 0 50%,#F1E2C2 50% 100%);box-shadow:0 5px 0 #B9A27A;display:flex;align-items:center;justify-content:center;font:34px Bungee,sans-serif;color:#2A1B57}
+.tile::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--bg);opacity:.45}
+.btn{text-transform:uppercase;align-self:stretch;display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;border-radius:18px;border:0;font:20px Bungee,sans-serif;text-decoration:none;cursor:pointer}
+.btn-gold{background:linear-gradient(#FFD866,#FFB51F);box-shadow:0 5px 0 #C97E00;color:#3A2200}
+.btn:active{transform:translateY(2px);box-shadow:0 3px 0 #C97E00}
+.btn:focus-visible,.store:focus-visible,.link:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.or{align-self:stretch;display:flex;align-items:center;gap:10px;color:#8F82C4;font-size:13px}.or::before,.or::after{content:"";flex:1;height:1.5px;background:#3A2A78}
+.stores{align-self:stretch;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.store{display:flex;align-items:center;gap:8px;min-height:58px;padding:0 12px;border-radius:14px;background:#0E0824;border:1.5px solid var(--line);color:var(--ink);text-decoration:none;text-align:left}
+.store small{display:block;font-size:11px;color:var(--dim);line-height:1.1}.store span{font-size:15px;font-weight:900;line-height:1.2}
+.store[aria-disabled=true]{opacity:.55;pointer-events:none}
+.note{font-size:13px;color:var(--dim)}
+.link{color:var(--gold);font-weight:900}
+.copied{color:var(--mint);font-size:13px;min-height:20px}
+.foot{margin-top:auto;font-size:12px;color:#8F82C4}
+.hide{display:none!important}
+@media (prefers-reduced-motion:no-preference){.tile{animation:flip .5s ease both}.tile:nth-child(2){animation-delay:.07s}.tile:nth-child(3){animation-delay:.14s}.tile:nth-child(4){animation-delay:.21s}.tile:nth-child(5){animation-delay:.28s}.tile:nth-child(6){animation-delay:.35s}}
+@keyframes flip{0%{transform:rotateX(-90deg)}100%{transform:rotateX(0)}}
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="/find-or-fill.html">FIND <i>or</i> <b>FILL</b></a>
+  <h1 id="title">Düelloya davet edildin</h1>
+  <p id="sub">Sayıyı bul, kutuları doldur. 100 kutuyu ilk dolduran kazanır.</p>
+  <div class="code" id="code" aria-label="Oda kodu"></div>
+  <a class="btn btn-gold" id="open" href="#">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 2 4 14h7l-1.5 8L19 10h-7z" fill="currentColor"/></svg>
+    <span id="openTxt">Uygulamada aç</span>
+  </a>
+  <div class="or" id="orTxt">Uygulama yüklü değil mi?</div>
+  <div class="stores">
+    <a class="store" id="play" href="#">
+      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.2v17.6c0 .5.5.8.9.5L14 12 4.9 2.7c-.4-.3-.9 0-.9.5z" fill="#2BE0A0"/><path d="M14 12 4.9 21.3c.2.1.5.1.7 0l10.9-6.4z" fill="#FF5E7E"/><path d="M14 12 5.6 2.7c-.2-.1-.5-.1-.7 0L14 12l2.5-2.6z" fill="#3DA9FC"/><path d="M16.5 9.4 14 12l2.5 2.9 3.1-1.8c.6-.4.6-1.3 0-1.6z" fill="#FFC93C"/></svg>
+      <div><small id="getOn1">İndir</small><span>Google Play</span></div>
+    </a>
+    <a class="store" id="ios" href="#" aria-disabled="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8C7 7.4 5.6 8.3 4.8 9.7c-1.6 2.8-.4 6.9 1.2 9.1.8 1.1 1.7 2.3 2.8 2.3 1.1 0 1.6-.7 2.9-.7 1.4 0 1.8.7 3 .7s2-1.1 2.7-2.2c.9-1.3 1.2-2.5 1.2-2.6 0 0-2.3-.9-2.2-3.7zM14.2 5.7c.6-.7 1-1.8.9-2.8-.9 0-2 .6-2.6 1.4-.6.6-1.1 1.7-.9 2.7 1 .1 2-.5 2.6-1.3z" fill="#FFF8EC"/></svg>
+      <div><small id="getOn2">Yakında</small><span>App Store</span></div>
+    </a>
+  </div>
+  <p class="note" id="after">Kurduktan sonra uygulamayı aç: davet otomatik bulunur. Bulunmazsa <b>Kodla katıl</b>'a kodu yaz.</p>
+  <p class="note" id="testNote"></p>
+  <div class="copied" id="copied" role="status"></div>
+  <p class="foot" id="bonus">İlk maçınızı bitirince ikinize de 50 oyun parası.</p>
+</main>
+<script>
+{
+  // ---- ayarlar ----
+  const PKG = 'com.foamgaming.findorfill';
+  const SCHEME = 'findorfill';
+  // Uygulama herkese açık yayına çıkana kadar kapalı test katılım linki de gösterilir
+  const CLOSED_TEST = true;
+  const TEST_URL = 'https://play.google.com/apps/testing/' + PKG;
+  // App Store'a çıkınca: 'https://apps.apple.com/app/idXXXXXXXXXX'
+  const APP_STORE_URL = '';
+
+  const q = new URLSearchParams(location.search);
+  const raw = (q.get('c') || location.hash.replace('#', '') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+  const code = raw.length === 6 ? raw : '';
+  const ua = navigator.userAgent || '';
+  const isAndroid = /Android/i.test(ua);
+  const isIOS = /iPhone|iPad|iPod/i.test(ua);
+  const en = !/^tr/i.test(navigator.language || 'tr');
+
+  const T = en ? {
+    title: 'You’ve been challenged to a duel', sub: 'Find the number, fill the boxes. First to fill 100 boxes wins.',
+    open: 'Open in the app', or: 'Don’t have the app?', get: 'Get it on', soon: 'Coming soon',
+    after: 'After installing, open the app: the invite is found automatically. If not, enter the code in <b>Join with code</b>.',
+    test: 'The game is in closed testing. <a class="link" href="' + TEST_URL + '">Join the test</a> first, then install.',
+    copied: 'Code copied. Install the app and open it.', bonus: 'You both get 50 coins after your first match.', nocode: 'Invalid invite link',
+  } : {
+    title: 'Düelloya davet edildin', sub: 'Sayıyı bul, kutuları doldur. 100 kutuyu ilk dolduran kazanır.',
+    open: 'Uygulamada aç', or: 'Uygulama yüklü değil mi?', get: 'İndir', soon: 'Yakında',
+    after: 'Kurduktan sonra uygulamayı aç: davet otomatik bulunur. Bulunmazsa <b>Kodla katıl</b>’a kodu yaz.',
+    test: 'Oyun kapalı testte. Önce <a class="link" href="' + TEST_URL + '">teste katıl</a>, sonra yükle.',
+    copied: 'Kod kopyalandı. Uygulamayı yükleyip aç.', bonus: 'İlk maçınızı bitirince ikinize de 50 oyun parası.', nocode: 'Geçersiz davet bağlantısı',
+  };
+  const $ = (id) => document.getElementById(id);
+  document.documentElement.lang = en ? 'en' : 'tr';
+  $('title').textContent = code ? T.title : T.nocode;
+  $('sub').textContent = T.sub;
+  $('openTxt').textContent = T.open;
+  $('orTxt').textContent = T.or;
+  $('getOn1').textContent = T.get;
+  $('getOn2').textContent = APP_STORE_URL ? T.get : T.soon;
+  $('after').innerHTML = T.after;
+  $('bonus').textContent = T.bonus;
+  if (CLOSED_TEST && !isIOS) $('testNote').innerHTML = T.test;
+
+  // oda kodu kartları
+  $('code').setAttribute('aria-label', code);
+  for (const ch of code) {
+    const s = document.createElement('span');
+    s.className = 'tile';
+    s.textContent = ch;
+    $('code').appendChild(s);
+  }
+
+  // Google Play: kod referrer olarak da eklenir (ileride kurulum sonrası otomatik katılım için)
+  const playUrl = 'https://play.google.com/store/apps/details?id=' + PKG + (code ? '&referrer=' + encodeURIComponent('room=' + code) : '');
+  const appUrl = SCHEME + '://join/' + code;
+  // Android Chrome: uygulama yüklüyse açar, değilse Play'e gider (tek dokunuş)
+  const intentUrl = 'intent://join/' + code + '#Intent;scheme=' + SCHEME + ';package=' + PKG + ';S.browser_fallback_url=' + encodeURIComponent(playUrl) + ';end';
+
+  $('play').href = playUrl;
+  if (APP_STORE_URL) {
+    $('ios').href = APP_STORE_URL;
+    $('ios').removeAttribute('aria-disabled');
+  }
+  if (!code) $('open').classList.add('hide');
+
+  // Mağazaya giderken kodu panoya bırak: uygulama ilk açılışta "findorfill:KOD"u bulup odaya sokar
+  const copyCode = () => {
+    if (!code || !navigator.clipboard) return;
+    navigator.clipboard.writeText('findorfill:' + code).then(() => ($('copied').textContent = T.copied)).catch(() => {});
+  };
+  $('play').addEventListener('click', copyCode);
+  $('ios').addEventListener('click', copyCode);
+
+  $('open').addEventListener('click', (e) => {
+    e.preventDefault();
+    copyCode();
+    if (isAndroid) {
+      location.href = intentUrl;
+    } else if (isIOS) {
+      const t = Date.now();
+      location.href = appUrl;
+      // Uygulama açılmadıysa (sayfa hâlâ görünür) mağazaya
+      setTimeout(() => {
+        if (document.visibilityState === 'visible' && Date.now() - t < 2500 && APP_STORE_URL) location.href = APP_STORE_URL;
+      }, 1600);
+    } else {
+      location.href = playUrl;
+    }
+  });
+
+  // Telefonda sayfa açılınca bir kez otomatik dene (App Links doğrulandıysa bu sayfa hiç açılmadan uygulama açılır)
+  if (code && isAndroid && !sessionStorage.getItem('fof_tried_' + code)) {
+    sessionStorage.setItem('fof_tried_' + code, '1');
+    setTimeout(() => (location.href = intentUrl), 300);
+  }
+}
+</script>
+</body>
+</html>

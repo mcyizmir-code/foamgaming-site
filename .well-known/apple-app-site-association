@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.com.foamgaming.findorfill"],
+        "components": [{ "/": "/join/*", "comment": "Find or Fill davet bağlantısı" }]
+      }
+    ]
+  }
+}
