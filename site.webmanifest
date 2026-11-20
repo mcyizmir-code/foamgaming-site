@@ -1,0 +1,19 @@
+{
+  "name": "Foam Gaming",
+  "short_name": "Foam",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b0e2a",
+  "theme_color": "#0b0e2a",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "type": "image/png"
+    }
+  ]
+}

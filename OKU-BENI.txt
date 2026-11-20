@@ -1,23 +1,38 @@
-FOAM GAMING SİTESİ — GÜNCELLEME (11 Kasım 2026)
-================================================
-Bu klasörün TÜM içeriğini sitenin köküne (GitHub Pages / hosting) yükle.
-CNAME, .nojekyll, app-ads.txt, favicon ve logolar korunmuştur.
+FOAM GAMING SİTESİ — STATİK ÜRETİCİ (20 Kasım 2026)
+====================================================
+Sayfalar artık elle düzenlenmiyor. İçerik _build/ klasöründe, sayfalar bir komutla üretiliyor.
 
-Ne değişti
-- index.html: tek oyun yerine stüdyo ana sayfası + oyun kartları
-- find-or-fill.html, bird-jam.html: oyun sayfaları
-- privacy.html / delete-data.html: TÜM oyunları kapsayan tek politika
-  (Play Console'da iki oyun da bu adresleri kullanıyor — adresler aynı kaldı)
-- games.js: oyun listesi; site.js: ortak header/footer; style.css: ortak stil
+KLASÖR
+  _build/content.mjs   Oyunlar (TR/EN metinler, paket adı, durum, mağaza linkleri), haberler, site ayarları
+  _build/media.py      Mağaza görsellerini/videolarını WebP/MP4'e çevirir → assets/ + _build/media.json
+  _build/build.mjs     Tüm .html sayfalarını, en/ klasörünü, sitemap.xml, robots.txt, 404.html üretir
+  _build/style.css, _build/site.js   Stil ve script kaynağı (assets/css, assets/js'e kopyalanır)
+  _build/legal/        Gizlilik ve veri silme metinleri (TR+EN aynı dosyada)
 
-YENİ OYUN EKLEMEK (örn. Hoop Star)
-1) İkonu ekle: hoop-star-icon.png (512x512)
-2) games.js → diziye yeni nesne ekle (id, name, description, icon, color, tags, status, page)
-3) bird-jam.html'i kopyala → hoop-star.html; <body data-game="hoop-star">, <title> ve "Nasıl oynanır?" adımlarını değiştir
-Ana sayfa kartı, menü, footer ve gizlilik sayfalarındaki oyun listesi otomatik güncellenir.
-Oyun yeni bir veri türü topluyorsa privacy.html tablosuna satır ekle.
+GÜNCELLEME
+  cd foamgaming-site
+  node _build/build.mjs          (metin/haber değiştiyse)
+  python3 _build/media.py        (yeni görsel/video eklendiyse, önce bu)
+  git add -A && git commit -m "site" && git push
+  Önbellek sürümü (?v=...) otomatik; elle artırmaya gerek yok.
+
+YENİ OYUN
+  1) media.py → GAMES'e ikon, feature, ekran görüntüsü, video yollarını ekle → python3 _build/media.py
+  2) content.mjs → GAMES dizisine yeni nesne (tr + en blokları)
+  3) node _build/build.mjs
+  Ana sayfa kartı, oyun sayfası (TR+EN), menü, footer, basın kiti, sitemap otomatik.
+  Oyun yeni bir veri türü topluyorsa _build/legal/privacy.body.html tablosuna satır ekle.
 
 MAĞAZAYA ÇIKINCA
-games.js → googlePlay / appStore linkini yaz, status: "live" yap.
+  content.mjs → googlePlay / appStore linkini yaz, status: "live" → build.
 
-GÜNCELLEME YAPINCA: tüm .html dosyalarında ?v=2 değerini ?v=3, ?v=4... diye artır (tarayıcı önbelleği için).
+HABER EKLEMEK
+  content.mjs → NEWS dizisinin en üstüne { date, game, tr:{title,body}, en:{title,body} } → build.
+
+AYARLAR (content.mjs → SITE)
+  formEndpoint      "Haber ver" formu. Formspree'de ücretsiz form aç, https://formspree.io/f/XXXX yaz.
+                    Boşken form kullanıcının e-posta uygulamasını açar.
+  cfAnalyticsToken  Cloudflare Web Analytics token'ı (çerezsiz). Yazılırsa gizlilik sayfasına not eklenir.
+  testerGroup       Kapalı test Google Grubu.
+
+Play Console'daki gizlilik / veri silme adresleri değişmedi: /privacy.html, /delete-data.html

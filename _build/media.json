@@ -1,0 +1,520 @@
+{
+ "games": {
+  "find-or-fill": {
+   "icon": {
+    "src": "assets/img/find-or-fill/icon.webp",
+    "size": [
+     256,
+     256
+    ]
+   },
+   "feature": {
+    "tr": {
+     "src": "assets/img/find-or-fill/feature-tr.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    },
+    "en": {
+     "src": "assets/img/find-or-fill/feature-en.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    }
+   },
+   "shots": {
+    "tr": [
+     {
+      "src": "assets/img/find-or-fill/tr-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/tr-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/tr-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/tr-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/tr-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/tr-6.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ],
+    "en": [
+     {
+      "src": "assets/img/find-or-fill/en-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/en-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/en-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/en-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/en-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/find-or-fill/en-6.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ]
+   },
+   "video": {
+    "tr": {
+     "src": "assets/video/find-or-fill-tr.mp4",
+     "poster": "assets/video/find-or-fill-tr.jpg",
+     "w": 540,
+     "h": 960
+    },
+    "en": {
+     "src": "assets/video/find-or-fill-en.mp4",
+     "poster": "assets/video/find-or-fill-en.jpg",
+     "w": 540,
+     "h": 960
+    }
+   },
+   "pressKit": {
+    "src": "assets/press/find-or-fill-press-kit.zip",
+    "bytes": 1802015
+   }
+  },
+  "bird-jam": {
+   "icon": {
+    "src": "assets/img/bird-jam/icon.webp",
+    "size": [
+     256,
+     256
+    ]
+   },
+   "feature": {
+    "tr": {
+     "src": "assets/img/bird-jam/feature-tr.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    },
+    "en": {
+     "src": "assets/img/bird-jam/feature-en.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    }
+   },
+   "shots": {
+    "tr": [
+     {
+      "src": "assets/img/bird-jam/tr-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/tr-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/tr-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/tr-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/tr-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ],
+    "en": [
+     {
+      "src": "assets/img/bird-jam/en-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/en-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/en-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/en-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bird-jam/en-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ]
+   },
+   "video": {
+    "tr": {
+     "src": "assets/video/bird-jam-tr.mp4",
+     "poster": "assets/video/bird-jam-tr.jpg",
+     "w": 540,
+     "h": 960
+    },
+    "en": {
+     "src": "assets/video/bird-jam-en.mp4",
+     "poster": "assets/video/bird-jam-en.jpg",
+     "w": 540,
+     "h": 960
+    }
+   },
+   "pressKit": {
+    "src": "assets/press/bird-jam-press-kit.zip",
+    "bytes": 1302206
+   }
+  },
+  "cannon-clash": {
+   "icon": {
+    "src": "assets/img/cannon-clash/icon.webp",
+    "size": [
+     256,
+     256
+    ]
+   },
+   "feature": {
+    "tr": {
+     "src": "assets/img/cannon-clash/feature-tr.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    },
+    "en": {
+     "src": "assets/img/cannon-clash/feature-en.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    }
+   },
+   "shots": {
+    "tr": [
+     {
+      "src": "assets/img/cannon-clash/tr-1.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/tr-2.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/tr-3.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/tr-4.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/tr-5.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/tr-6.webp",
+      "size": [
+       960,
+       540
+      ]
+     }
+    ],
+    "en": [
+     {
+      "src": "assets/img/cannon-clash/en-1.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/en-2.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/en-3.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/en-4.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/en-5.webp",
+      "size": [
+       960,
+       540
+      ]
+     },
+     {
+      "src": "assets/img/cannon-clash/en-6.webp",
+      "size": [
+       960,
+       540
+      ]
+     }
+    ]
+   },
+   "video": {},
+   "pressKit": {
+    "src": "assets/press/cannon-clash-press-kit.zip",
+    "bytes": 1238108
+   }
+  },
+  "bogaz-vts": {
+   "icon": {
+    "src": "assets/img/bogaz-vts/icon.webp",
+    "size": [
+     256,
+     256
+    ]
+   },
+   "feature": {
+    "tr": {
+     "src": "assets/img/bogaz-vts/feature-tr.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    },
+    "en": {
+     "src": "assets/img/bogaz-vts/feature-en.jpg",
+     "size": [
+      1024,
+      500
+     ]
+    }
+   },
+   "shots": {
+    "tr": [
+     {
+      "src": "assets/img/bogaz-vts/tr-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/tr-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/tr-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/tr-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/tr-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/tr-6.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ],
+    "en": [
+     {
+      "src": "assets/img/bogaz-vts/en-1.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/en-2.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/en-3.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/en-4.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/en-5.webp",
+      "size": [
+       540,
+       960
+      ]
+     },
+     {
+      "src": "assets/img/bogaz-vts/en-6.webp",
+      "size": [
+       540,
+       960
+      ]
+     }
+    ]
+   },
+   "video": {},
+   "pressKit": {
+    "src": "assets/press/bogaz-vts-press-kit.zip",
+    "bytes": 2117624
+   }
+  }
+ },
+ "logo": {
+  "src": "assets/img/logo.webp",
+  "size": [
+   245,
+   88
+  ]
+ },
+ "test-join-tr": {
+  "src": "assets/video/test-join-tr.mp4",
+  "poster": "assets/video/test-join-tr.jpg",
+  "w": 540,
+  "h": 960
+ },
+ "logoKit": {
+  "src": "assets/press/foam-gaming-logo.zip",
+  "bytes": 228211
+ },
+ "ogHome": {
+  "src": "assets/img/og-home.jpg",
+  "size": [
+   1200,
+   630
+  ]
+ }
+}
