@@ -130,7 +130,7 @@
    },
    "pressKit": {
     "src": "assets/press/find-or-fill-press-kit.zip",
-    "bytes": 1802015
+    "bytes": 2492938
    }
   },
   "bird-jam": {
@@ -193,6 +193,13 @@
        540,
        960
       ]
+     },
+     {
+      "src": "assets/img/bird-jam/tr-6.webp",
+      "size": [
+       540,
+       960
+      ]
      }
     ],
     "en": [
@@ -230,26 +237,20 @@
        540,
        960
       ]
+     },
+     {
+      "src": "assets/img/bird-jam/en-6.webp",
+      "size": [
+       540,
+       960
+      ]
      }
     ]
    },
-   "video": {
-    "tr": {
-     "src": "assets/video/bird-jam-tr.mp4",
-     "poster": "assets/video/bird-jam-tr.jpg",
-     "w": 540,
-     "h": 960
-    },
-    "en": {
-     "src": "assets/video/bird-jam-en.mp4",
-     "poster": "assets/video/bird-jam-en.jpg",
-     "w": 540,
-     "h": 960
-    }
-   },
+   "video": {},
    "pressKit": {
     "src": "assets/press/bird-jam-press-kit.zip",
-    "bytes": 1302206
+    "bytes": 2913562
    }
   },
   "cannon-clash": {

@@ -3,7 +3,8 @@
 
 Kaynak: ../ (projeler klasörü) altındaki mağaza görselleri ve reklam videoları.
 Çıktı:  assets/ + _build/media.json (boyutlar, build.mjs okur).
-Çalıştır:  cd foamgaming-site && python3 _build/media.py [--force]
+Çalıştır:  cd foamgaming-site && python3 _build/media.py [--force] [--only <oyun-id>]
+           --force --only bird-jam  → yalnızca o oyunun görsellerini (ve paylaşım görselini) yeniden üretir
 Yeni oyun: aşağıdaki GAMES sözlüğüne kaynak yollarını ekle.
 """
 import glob, json, os, subprocess, sys, zipfile
@@ -11,7 +12,9 @@ from PIL import Image, ImageDraw, ImageFilter
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(SITE)  # projeler/
-FORCE = "--force" in sys.argv
+ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
+FORCE_ALL = "--force" in sys.argv and not ONLY
+FORCE = FORCE_ALL
 A = os.path.join(SITE, "assets")
 
 def P(*p): return os.path.join(ROOT, *p)
@@ -29,9 +32,9 @@ GAMES = {
     },
     "bird-jam": {
         "icon": S("bird-jam-icon.png"),
-        "feature": {l: P("bird ek dosyalar", "BirdJam_magaza", l, "google_play", "feature_graphic_1024x500.png") for l in ("tr", "en")},
-        "shots": {l: P("bird ek dosyalar", "BirdJam_magaza", l, "google_play", "[0-9]_*.png") for l in ("tr", "en")},
-        "video": {l: P("bird ek dosyalar", "BirdJam_magaza", l, "video", "*.mp4") for l in ("tr", "en")},
+        "feature": {l: P("bird ek dosyalar", "BirdJam_magaza_v2", l, "google_play", "feature_graphic_1024x500.png") for l in ("tr", "en")},
+        "shots": {l: P("bird ek dosyalar", "BirdJam_magaza_v2", l, "google_play", "[0-9]_*.png") for l in ("tr", "en")},
+        "video": {},  # eski reklam videosu eski görünüme ait; yeni video hazır olunca BirdJam_magaza_v2/<dil>/video/*.mp4
     },
     "cannon-clash": {
         "icon": S("cannon-clash-icon.png"),
@@ -88,6 +91,7 @@ manifest = {"games": {}}
 manifest["logo"] = {"src": "assets/img/logo.webp", "size": save_webp(S("foam-gaming.png"), os.path.join(A, "img", "logo.webp"), height=88, q=90)}
 
 for gid, g in GAMES.items():
+    FORCE = FORCE_ALL or ("--force" in sys.argv and gid == ONLY)
     out = os.path.join(A, "img", gid)
     m = {"icon": {"src": rel(os.path.join(out, "icon.webp")),
                   "size": save_webp(g["icon"], os.path.join(out, "icon.webp"), width=256, q=88)},
@@ -122,6 +126,7 @@ for gid, g in GAMES.items():
 for name, src in EXTRA_VIDEOS.items():
     manifest[name] = video(src, os.path.join(A, "video", f"{name}.mp4"))
 
+FORCE = FORCE_ALL
 # Stüdyo basın kiti (logo)
 lz = os.path.join(A, "press", "foam-gaming-logo.zip")
 if need(lz):
@@ -130,7 +135,8 @@ if need(lz):
         zf.write(S("apple-touch-icon.png"), "foam-gaming-icon.png")
 manifest["logoKit"] = {"src": rel(lz), "bytes": os.path.getsize(lz)}
 
-# Ana sayfa paylaşım görseli 1200x630
+# Ana sayfa paylaşım görseli 1200x630 (oyun ikonlarını içerir → tek oyun güncellenince de yenilenir)
+FORCE = "--force" in sys.argv
 og = os.path.join(A, "img", "og-home.jpg")
 if need(og):
     W, H = 1200, 630
