@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.foamgaming.findorfill",
       "sha256_cert_fingerprints": [
         "1C:29:AF:33:7F:76:04:B6:60:82:81:4E:F2:FD:82:96:21:4E:FD:5E:88:9E:4A:40:6D:53:C0:D7:02:7C:2C:10",
+        "60:A5:76:87:15:83:92:86:51:82:15:AF:A9:E9:FB:ED:0D:86:F0:EC:30:43:F0:49:72:88:67:69:BA:98:B4:F8",
         "23:1C:15:FB:D0:7C:1B:A8:61:AE:A1:5D:25:F3:4F:B3:3B:63:2A:0F:C3:E2:FA:BC:BA:F2:ED:91:98:DE:09:47"
       ]
     }

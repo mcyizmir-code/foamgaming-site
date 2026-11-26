@@ -28,8 +28,8 @@ export const GAMES = [
     id: "find-or-fill",
     pkg: "com.foamgaming.findorfill",
     color: "#fbbf24",
-    status: "test",
-    googlePlay: "",
+    status: "live",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.foamgaming.findorfill",
     appStore: "",
     tr: {
       name: "Find or Fill",
